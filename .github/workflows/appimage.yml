@@ -37,7 +37,7 @@ jobs:
           UPDATE_INFO: gh-releases-zsync|mfdorst|dotconfig|latest|*x86_64.AppImage.zsync
         with:
           recipe: AppImageBuilder.yml
-      - uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v3
         with:
           name: AppImage
           path: './*.AppImage*'
