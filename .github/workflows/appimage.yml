@@ -28,11 +28,11 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Build AppImage
-        uses: actions/download-artifact@v3
+      - uses: actions/download-artifact@v3
         with:
           name: executable
           path: dotconfig
-        uses: AppImageCrafters/build-appimage-action@master
+      - uses: AppImageCrafters/build-appimage-action@master
         env:
           UPDATE_INFO: gh-releases-zsync|mfdorst|dotconfig|latest|*x86_64.AppImage.zsync
         with:
